@@ -194,7 +194,7 @@ input, select, textarea {
 		}
 
 	h1 {
-		font-size: 4.25em;
+		font-size: 4em;
 		/* filter: drop-shadow(-3px 3px 0px rgb(38, 37, 31)); */
 		margin: 0;
 	}
@@ -2623,38 +2623,6 @@ input, select, textarea {
 				width: 100%;
 			}
 
-		/* .headshot {
-			background-size: cover;
-			height: 400px;
-			float: right;
-			outline: 1px solid red;
-		}
-		
-		#about {
-			width: 100%;
-			height: 500px;
-			outline: 1px solid red;
-		}
-
-		#about > .image.right {
-			background: hotpink;
-			width: 40%;
-			height: 500px;
-			float: left;
-			outline: 1px solid red;
-		}
-
-		.left {
-			float: left;
-		}
-
-		#about > .left {
-			padding: 5em 5em 3em 5em ;
-			max-width: 60%;
-			width: 75em;
-			outline: 1px solid red;
-		} */
-
 /* List */
 
 	ol {
@@ -3038,7 +3006,7 @@ input, select, textarea {
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
 		flex-direction: row;
-		min-height: 22.5em;
+		min-height: 24em;
 	}
 
 		body.is-ie .spotlights > section {
@@ -3046,12 +3014,17 @@ input, select, textarea {
 		}
 
 		.spotlights > section > .image {
+			background: no-repeat;
 			background-position: center center;
-			background-size: cover;
+			background-size: contain;
 			border-radius: 0;
 			display: block;
 			position: relative;
-			width: 25em;
+			width: 30em;
+		}
+
+		.spotlights > section > .project {
+			width: 90em;
 		}
 
 			.spotlights > section > .image img {
@@ -3064,7 +3037,7 @@ input, select, textarea {
 				-webkit-transition: opacity 1s ease;
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
-				background: rgba(49, 36, 80, 0.9);
+				background: rgba(15, 36, 31, 0.9);
 				content: '';
 				display: block;
 				height: 100%;
@@ -3090,7 +3063,7 @@ input, select, textarea {
 			-ms-justify-content: center;
 			justify-content: center;
 			width: 50em;
-			-ms-flex: 1;
+			/* -ms-flex: 1; */
 		}
 
 			.spotlights > section > .content > .inner {
@@ -3105,11 +3078,12 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-		.spotlights > section:nth-child(2) {
+		.spotlights > section:nth-child(4) {
 			background-color: rgba(0, 0, 0, 0.05);
 		}
 
-		.spotlights > section:nth-child(3) {
+		.spotlights > section:nth-child(3),
+		.spotlights > section:nth-child(5) {
 			background-color: rgba(0, 0, 0, 0.1);
 		}
 
@@ -3125,6 +3099,12 @@ input, select, textarea {
 			-ms-transform: translateX(-1em);
 			transform: translateX(-1em);
 			opacity: 0;
+		}
+
+		.header {
+			width: 100%;
+			text-align: center;
+			padding-top: 20px;
 		}
 
 		@media screen and (max-width: 1680px) {
@@ -3287,7 +3267,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style1-alt {
-			background-color: #001f17;
+			background-color: rgb(15, 33, 28);
 		}
 
 		.wrapper.style2 {
@@ -3312,9 +3292,9 @@ input, select, textarea {
 			display: -webkit-flex;
 			display: -ms-flex;
 			display: flex;
-			/* -moz-flex-direction: column;
+			-moz-flex-direction: column;
 			-webkit-flex-direction: column;
-			-ms-flex-direction: column; */
+			-ms-flex-direction: column;
 			flex-direction: column;
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
@@ -3939,13 +3919,9 @@ input, select, textarea {
 	#intro {
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
-		/* background-image: linear-gradient(to bottom, rgba(166,187,234,1) 0%, rgba(176,198,247,0.65) 100%),
-			url("images/mainimage.jpg"); */
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
-		/* display: flex;
-		justify-content: space-around; */
 	}
 
 		#intro p {
